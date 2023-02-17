@@ -1,5 +1,6 @@
 :root {
     --primary-color: #FFFFFF;
+    --primary-color-text: #434455;
     --accent-text-color: #4D5AE5;
     --second-background-title: #2E2F42;
     --active-color: #404BBF;
@@ -9,11 +10,11 @@
 /* глобальные стили */
 body {
     background-color: var(--primary-color);
-    color: #434455;
-    font-family: Roboto, sans-serif;
+    color: var(--primary-color-text);
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 1.5;
     letter-spacing: 0.02em;   
 }
 
@@ -23,13 +24,22 @@ body {
     text-decoration: none;
 }
 
+/* размеры контейнеров */
+.container {
+    width: 1152px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 0 auto;
+    outline: 1px solid teal;
+}
+
 /* стили navigation */
 .logo {
     color: var(--accent-text-color);
-    font-family: Raleway;
+    font-family: "Raleway", sans-serif;
     font-size: 18px;
     font-weight: 800;
-    line-height: 24px;
+    line-height: 1.33;
     letter-spacing: 0.03em;
 }
 
@@ -41,21 +51,17 @@ body {
     color: var(--second-background-title);
     font-weight: 500;
 }
-.site-nav a:hover,
-.site-nav a:focus {
+.site-nav:hover,
+.site-nav:focus {
     color: var(--accent-text-color);
 }
 
-.contacts a {
-    color: #434455;
+.contacts {
+    color: var(--primary-color-text);
 }
-.contacts a:hover,
-.contacts a:focus {
+.contacts:hover,
+.contacts:focus {
     color: var(--accent-text-color);
-}
-
-a:active {
-    color: var(--active-color);
 }
 
 /* стили hero */
@@ -67,17 +73,27 @@ a:active {
     color: var(--primary-color);
     font-size: 56px;
     font-weight: 700;
-    line-height: 60px;
+    line-height: 1.07;
     letter-spacing: 0.02em;  
 }
 
 .hero-button {
+    display: inline-block;
     color: var(--primary-color);
     background-color: var(--accent-text-color);
     border: none;
     cursor: pointer;
+    font-family: inherit;
     font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
     letter-spacing: 0.04em;
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px 32px;
+    min-width: 169px;
+    line-height: 128%;
+    /* почему высота кнопки 52.48, а в макете 56? */
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -101,20 +117,29 @@ a:active {
 
 .sectionOne-title {
     font-size: 20px;
-    font-weight: 400;
-    line-height: 24px;
+    font-weight: 500;
+    line-height: 1.2;
     letter-spacing: 0.02em; 
 }
 
 .sectionTwo-title {
     font-size: 36px;
     font-weight: 700;
-    line-height: 40px;
+    line-height: 1.1;
     letter-spacing: 0.02em; 
+    text-transform: capitalize; 
 }
 
 .sectionTeam {
     background-color: var(--additional-color);
+}
+
+.sectionTeam-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-transform: capitalize; 
 }
 
 /* cтили footer */
@@ -134,11 +159,12 @@ a:active {
 /* Portfolio */
 /* стили filters */
 .btn-filters {
-    font-family: Roboto, sans-serif;
+    font-family: inherit;
     font-size: 16px;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 1.5;
     letter-spacing: 0.04em; 
+    border:none;
 }
 
 .btn-filters {
@@ -152,17 +178,25 @@ a:active {
     color: var(--primary-color);
 }
 
-.active {
-    background-color: var(--active-color);
-    color: var(--primary-color);
-}
-
-
 /* стили списка картинок */
 .pictures-title {
     color: var(--second-background-title);
     font-size: 20px;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 1.2;
     letter-spacing: 0.02em; 
+}
+
+.pictures-text {
+    color: var(--primary-color-text);
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em; 
+}
+
+.card:hover,
+.card:focus {
+    outline: 1px solid var(--accent-text-color);
 }
