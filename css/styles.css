@@ -1,0 +1,168 @@
+:root {
+    --primary-color: #FFFFFF;
+    --accent-text-color: #4D5AE5;
+    --second-background-title: #2E2F42;
+    --active-color: #404BBF;
+    --additional-color:#F4F4FD;
+}
+
+/* глобальные стили */
+body {
+    background-color: var(--primary-color);
+    color: #434455;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.02em;   
+}
+
+/* класс для сброса св-в, заданных по умолчанию */
+.reset {
+    list-style: none;
+    text-decoration: none;
+}
+
+/* стили navigation */
+.logo {
+    color: var(--accent-text-color);
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+}
+
+.logo .nav-span {
+    color: var(--second-background-title);
+}
+
+.site-nav {
+    color: var(--second-background-title);
+    font-weight: 500;
+}
+.site-nav a:hover,
+.site-nav a:focus {
+    color: var(--accent-text-color);
+}
+
+.contacts a {
+    color: #434455;
+}
+.contacts a:hover,
+.contacts a:focus {
+    color: var(--accent-text-color);
+}
+
+a:active {
+    color: var(--active-color);
+}
+
+/* стили hero */
+.hero {
+    background-color: var(--second-background-title);
+}
+
+.hero-title {
+    color: var(--primary-color);
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0.02em;  
+}
+
+.hero-button {
+    color: var(--primary-color);
+    background-color: var(--accent-text-color);
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+}
+.hero-button:hover,
+.hero-button:focus {
+    background-color:var(--active-color);
+}
+
+/* cтили section */
+.hide {
+    /* как правтльно скрыть заголовок, чтобы читалка видела, а пол-ль нет и на версту не влиял? */
+    opacity: 0;
+    /* или display: none; ?*/
+    padding: 0;
+    margin: 0;
+}
+
+.sectionOne-title,
+.sectionTwo-title,
+.sectionTeam-title {
+    color: var(--second-background-title);
+}
+
+.sectionOne-title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.02em; 
+}
+
+.sectionTwo-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.02em; 
+}
+
+.sectionTeam {
+    background-color: var(--additional-color);
+}
+
+/* cтили footer */
+.footer {
+    background-color: var(--second-background-title);
+}
+
+.logo .footer-span {
+    color: var(--additional-color);
+}
+
+.footer p {
+    color: #E7E9FC;
+}
+
+
+/* Portfolio */
+/* стили filters */
+.btn-filters {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.04em; 
+}
+
+.btn-filters {
+    background-color: var(--additional-color);
+    color: var(--accent-text-color); 
+}
+.btn-filters:hover,
+.btn-filters:focus {
+    cursor: pointer;
+    background-color: var(--active-color);
+    color: var(--primary-color);
+}
+
+.active {
+    background-color: var(--active-color);
+    color: var(--primary-color);
+}
+
+
+/* стили списка картинок */
+.pictures-title {
+    color: var(--second-background-title);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em; 
+}
