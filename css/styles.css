@@ -24,6 +24,31 @@ body {
     text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6,
+ul,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+/* класс для скрытия заголовков, которые введены для семантики */
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+} 
+
 /* размеры контейнеров */
 .container {
     width: 1152px;
@@ -66,18 +91,26 @@ body {
 
 /* стили hero */
 .hero {
+    height: 600px;
     background-color: var(--second-background-title);
+    text-align: center;
+    outline: 1px solid teal;
 }
 
 .hero-title {
+    margin: 0 auto 48px auto;
+    padding-top: 188px;
+    width: 496px;
     color: var(--primary-color);
     font-size: 56px;
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 0.02em;  
+    outline: 1px solid teal;
 }
 
 .hero-button {
+    margin-bottom: 188px;
     display: inline-block;
     color: var(--primary-color);
     background-color: var(--accent-text-color);
@@ -93,6 +126,7 @@ body {
     padding: 16px 32px;
     min-width: 169px;
     line-height: 128%;
+    outline: 1px solid teal;
     /* почему высота кнопки 52.48, а в макете 56? */
 }
 .hero-button:hover,
@@ -101,21 +135,21 @@ body {
 }
 
 /* cтили section */
-.hide {
-    /* как правтльно скрыть заголовок, чтобы читалка видела, а пол-ль нет и на версту не влиял? */
-    opacity: 0;
-    /* или display: none; ?*/
-    padding: 0;
-    margin: 0;
-}
-
 .sectionOne-title,
 .sectionTwo-title,
 .sectionTeam-title {
     color: var(--second-background-title);
 }
 
-.sectionOne-title {
+.hero,
+.sectionOne,
+.sectionTwo {
+    margin-bottom: 120px;
+}
+
+.sectionOne-title,
+.sectionTeam-name {
+    margin-bottom: 8px;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
@@ -123,6 +157,7 @@ body {
 }
 
 .sectionTwo-title {
+    margin-bottom: 72px;
     font-size: 36px;
     font-weight: 700;
     line-height: 1.1;
@@ -131,10 +166,14 @@ body {
 }
 
 .sectionTeam {
+    text-align: center;
+    padding-bottom: 120px;
     background-color: var(--additional-color);
 }
 
 .sectionTeam-title {
+    padding-top: 120px;
+    margin-bottom: 72px;
     font-size: 36px;
     font-weight: 700;
     line-height: 1.1;
@@ -153,6 +192,19 @@ body {
 
 .footer p {
     color: #E7E9FC;
+}
+
+.footer-container {
+    width: 264px;
+    margin-left: 156px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    outline: 1px solid teal;
+}
+
+.footer-container a {
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 
