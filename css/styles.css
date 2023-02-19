@@ -5,6 +5,7 @@
     --second-background-title: #2E2F42;
     --active-color: #404BBF;
     --additional-color:#F4F4FD;
+    --border-color-header: #E7E9FC;
 }
 
 /* глобальные стили */
@@ -18,7 +19,7 @@ body {
     letter-spacing: 0.02em;   
 }
 
-/* класс для сброса св-в, заданных по умолчанию */
+/* правила для сброса св-в, заданных по умолчанию */
 .reset {
     list-style: none;
     text-decoration: none;
@@ -33,6 +34,11 @@ p {
 
 ul {
     padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 /* класс для скрытия заголовков, которые введены для семантики */
@@ -51,14 +57,65 @@ ul {
 
 /* размеры контейнеров */
 .container {
-    width: 1152px;
-    padding-left: 12px;
-    padding-right: 12px;
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin: 0 auto;
     outline: 1px solid teal;
 }
 
-/* стили navigation */
+/*! стили navigation */
+.menu {
+    display: flex;
+    padding: 24px 0px;
+    align-items: center;
+    flex-basis: calc(100% / 2);
+    outline: 1px solid teal;
+}
+
+.menu > .list-contacts {
+    margin-left: auto;
+    outline: 1px solid teal;
+}
+
+.list-contacts {
+    display: flex;
+    justify-content: end;
+    flex-basis: calc(100% / 2 );
+    outline: 1px solid teal;
+}
+
+.list-contacts > li:last-child {
+    margin-left: 40px;
+    outline: 1px solid teal;
+}
+
+.list-nav {
+    display: flex;
+    flex-basis: calc(100% / 2 );
+    outline: 1px solid teal;
+}
+
+.list-nav > ul {
+    margin-left: 76px;
+    outline: 1px solid teal;
+}
+
+.nav-pages {
+    display: flex;
+    flex-basis: calc( 100% / 3 );
+    outline: 1px solid teal;
+}
+
+.nav-pages > li:not(:first-child) {
+    margin-left: 40px;
+    outline: 1px solid teal;
+}
+
+header {
+    border-bottom: 1px solid var(--border-color-header); 
+}
+
 .logo {
     color: var(--accent-text-color);
     font-family: "Raleway", sans-serif;
@@ -89,17 +146,23 @@ ul {
     color: var(--accent-text-color);
 }
 
+
+/*! Studio */
 /* стили hero */
 .hero {
-    height: 600px;
     background-color: var(--second-background-title);
+}
+
+.hero-content {
+    padding-top: 188px;
+    padding-bottom: 188px; 
     text-align: center;
     outline: 1px solid teal;
 }
 
 .hero-title {
-    margin: 0 auto 48px auto;
-    padding-top: 188px;
+    margin: 0 auto;
+    margin-bottom: 48px;
     width: 496px;
     color: var(--primary-color);
     font-size: 56px;
@@ -110,7 +173,6 @@ ul {
 }
 
 .hero-button {
-    margin-bottom: 188px;
     display: inline-block;
     color: var(--primary-color);
     background-color: var(--accent-text-color);
@@ -156,7 +218,19 @@ ul {
     letter-spacing: 0.02em; 
 }
 
+.list-solutions {
+    display: flex;
+    flex-basis: calc(100% / 4);
+    outline: 1px solid teal;
+}
+
+.list-solutions > li:not(:first-child) {
+    margin-left: 24px;
+    outline: 1px solid teal;
+}
+
 .sectionTwo-title {
+    text-align: center;
     margin-bottom: 72px;
     font-size: 36px;
     font-weight: 700;
@@ -165,12 +239,34 @@ ul {
     text-transform: capitalize; 
 }
 
+.list-img {
+    display: flex;
+    flex-basis: calc(100% / 3);
+    justify-content: space-between;
+    outline: 1px solid teal;
+}
+
+.list-img > li {
+    outline: 1px solid teal;
+}
+
 .sectionTeam {
     text-align: center;
     padding-bottom: 120px;
     background-color: var(--additional-color);
 }
 
+.card-team {
+    display: inline-block;
+    text-align: center;
+    outline: 1px solid teal;
+}
+.card-team * {
+    outline: 1px solid teal;
+}
+.card-content {
+    padding: 32px 16px;
+}
 .sectionTeam-title {
     padding-top: 120px;
     margin-bottom: 72px;
@@ -181,36 +277,34 @@ ul {
     text-transform: capitalize; 
 }
 
-/* cтили footer */
-.footer {
-    background-color: var(--second-background-title);
-}
-
-.logo .footer-span {
-    color: var(--additional-color);
-}
-
-.footer p {
-    color: #E7E9FC;
-}
-
-.footer-container {
-    width: 264px;
-    margin-left: 156px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+.list-team {
+    display: flex;
+    flex-basis: calc(100% / 4 );
     outline: 1px solid teal;
 }
 
-.footer-container a {
-    display: inline-block;
-    margin-bottom: 16px;
+.list-team > li:not(:first-child) {
+    margin-left: 24px;
+    outline: 1px solid teal;
 }
 
-
-/* Portfolio */
+/*! Portfolio */
 /* стили filters */
+
+.list-button {
+    display: flex;
+    flex-basis: calc(100% / 5 );
+    justify-content: center;
+    outline: 1px solid teal;
+    margin-bottom: 72px;
+}
+
+.list-button > li:not(:first-child) {
+    margin-left: 24px;
+}
+
 .btn-filters {
+    padding: 12px 24px;
     font-family: inherit;
     font-size: 16px;
     font-weight: 500;
@@ -231,6 +325,14 @@ ul {
 }
 
 /* стили списка картинок */
+.card-portfolio {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 54px;
+    outline: 1px solid var(--accent-text-color);
+}
+
 .pictures-title {
     color: var(--second-background-title);
     font-size: 20px;
@@ -251,4 +353,55 @@ ul {
 .card:hover,
 .card:focus {
     outline: 1px solid var(--accent-text-color);
+}
+
+.portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
+.card {
+    /* border-right: 1px solid var(--border-color-header); 
+    border-left: 1px solid var(--border-color-header); */
+    border-bottom: 1px solid var(--border-color-header);
+}
+
+.list-card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: calc(100% / 3 );
+    margin-left: -24px;
+    margin-top: -48px;
+    outline: 1px solid teal;
+}
+
+.list-card > li {
+    margin-left: 24px;
+    margin-top: 48px;
+}
+
+/*! cтили footer */
+.footer {
+    background-color: var(--second-background-title);
+}
+
+.logo .footer-span {
+    color: var(--additional-color);
+}
+
+.footer p {
+    color: var(--border-color-header);
+}
+
+.footer-container {
+    width: 264px;
+    margin-left: 156px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    outline: 1px solid teal;
+}
+
+.footer-container a {
+    display: inline-block;
+    margin-bottom: 16px;
 }
