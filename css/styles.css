@@ -57,60 +57,41 @@ img {
 
 /* размеры контейнеров */
 .container {
-    width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
-    outline: 1px solid teal;
+    width: 1160px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /*! стили navigation */
-.menu {
+.header {
     display: flex;
-    padding: 24px 0px;
-    align-items: center;
-    flex-basis: calc(100% / 2);
-    outline: 1px solid teal;
-}
-
-.menu > .list-contacts {
-    margin-left: auto;
-    outline: 1px solid teal;
-}
-
-.list-contacts {
-    display: flex;
-    justify-content: end;
-    flex-basis: calc(100% / 2 );
-    outline: 1px solid teal;
-}
-
-.list-contacts > li:last-child {
-    margin-left: 40px;
-    outline: 1px solid teal;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .list-nav {
     display: flex;
-    flex-basis: calc(100% / 2 );
-    outline: 1px solid teal;
-}
-
-.list-nav > ul {
-    margin-left: 76px;
-    outline: 1px solid teal;
 }
 
 .nav-pages {
     display: flex;
-    flex-basis: calc( 100% / 3 );
-    outline: 1px solid teal;
+    margin-left: 76px;
 }
 
 .nav-pages > li:not(:first-child) {
     margin-left: 40px;
-    outline: 1px solid teal;
+} 
+
+.list-contacts {
+    display: flex;
+    margin-left: auto;
 }
+
+.list-contacts > li:not(:first-child) {
+    margin-left: 40px;
+} 
 
 header {
     border-bottom: 1px solid var(--border-color-header); 
@@ -151,25 +132,19 @@ header {
 /* стили hero */
 .hero {
     background-color: var(--second-background-title);
-}
-
-.hero-content {
     padding-top: 188px;
     padding-bottom: 188px; 
     text-align: center;
-    outline: 1px solid teal;
 }
 
 .hero-title {
-    margin: 0 auto;
-    margin-bottom: 48px;
+    margin: 0 auto 48px;
     width: 496px;
     color: var(--primary-color);
     font-size: 56px;
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 0.02em;  
-    outline: 1px solid teal;
 }
 
 .hero-button {
@@ -186,9 +161,6 @@ header {
     text-align: center;
     border-radius: 4px;
     padding: 16px 32px;
-    min-width: 169px;
-    line-height: 128%;
-    outline: 1px solid teal;
     /* почему высота кнопки 52.48, а в макете 56? */
 }
 .hero-button:hover,
@@ -197,16 +169,15 @@ header {
 }
 
 /* cтили section */
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
 .sectionOne-title,
 .sectionTwo-title,
 .sectionTeam-title {
     color: var(--second-background-title);
-}
-
-.hero,
-.sectionOne,
-.sectionTwo {
-    margin-bottom: 120px;
 }
 
 .sectionOne-title,
@@ -220,13 +191,14 @@ header {
 
 .list-solutions {
     display: flex;
-    flex-basis: calc(100% / 4);
-    outline: 1px solid teal;
 }
 
 .list-solutions > li:not(:first-child) {
     margin-left: 24px;
-    outline: 1px solid teal;
+}
+
+.sectionTwo {
+    padding-bottom: 120px;
 }
 
 .sectionTwo-title {
@@ -241,34 +213,23 @@ header {
 
 .list-img {
     display: flex;
-    flex-basis: calc(100% / 3);
-    justify-content: space-between;
-    outline: 1px solid teal;
 }
 
-.list-img > li {
-    outline: 1px solid teal;
+.list-img > li:not(:first-child) {
+    margin-left: 24px;
 }
 
 .sectionTeam {
     text-align: center;
-    padding-bottom: 120px;
     background-color: var(--additional-color);
 }
 
-.card-team {
-    display: inline-block;
-    text-align: center;
-    outline: 1px solid teal;
-}
-.card-team * {
-    outline: 1px solid teal;
-}
 .card-content {
-    padding: 32px 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: var(--primary-color);
 }
 .sectionTeam-title {
-    padding-top: 120px;
     margin-bottom: 72px;
     font-size: 36px;
     font-weight: 700;
@@ -279,23 +240,22 @@ header {
 
 .list-team {
     display: flex;
-    flex-basis: calc(100% / 4 );
-    outline: 1px solid teal;
 }
 
 .list-team > li:not(:first-child) {
     margin-left: 24px;
-    outline: 1px solid teal;
 }
 
 /*! Portfolio */
-/* стили filters */
+.portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
 
+/* стили filters */
 .list-button {
     display: flex;
-    flex-basis: calc(100% / 5 );
     justify-content: center;
-    outline: 1px solid teal;
     margin-bottom: 72px;
 }
 
@@ -310,30 +270,33 @@ header {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em; 
-    border:none;
+    border-radius:4px;
+    border: 1px solid var(--border-color-header);
+    background-color: var(--additional-color);
+    color: var(--accent-text-color);
+    cursor: pointer; 
 }
 
-.btn-filters {
-    background-color: var(--additional-color);
-    color: var(--accent-text-color); 
-}
 .btn-filters:hover,
 .btn-filters:focus {
-    cursor: pointer;
     background-color: var(--active-color);
     color: var(--primary-color);
+    border: 1px solid var(--active-color);
 }
 
 /* стили списка картинок */
 .card-portfolio {
-    margin-top: 32px;
-    margin-bottom: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     padding-left: 16px;
-    padding-right: 54px;
-    outline: 1px solid var(--accent-text-color);
+    border-right: 1px solid var(--border-color-header); 
+    border-left: 1px solid var(--border-color-header);
+    border-bottom: 1px solid var(--border-color-header);
+
 }
 
 .pictures-title {
+    margin-bottom: 8px;
     color: var(--second-background-title);
     font-size: 20px;
     font-weight: 500;
@@ -352,37 +315,37 @@ header {
 
 .card:hover,
 .card:focus {
-    outline: 1px solid var(--accent-text-color);
-}
-
-.portfolio {
-    padding-top: 96px;
-    padding-bottom: 120px;
-}
-
-.card {
-    /* border-right: 1px solid var(--border-color-header); 
-    border-left: 1px solid var(--border-color-header); */
-    border-bottom: 1px solid var(--border-color-header);
+    /* outline: 1px solid var(--accent-text-color); */
 }
 
 .list-card {
     display: flex;
     flex-wrap: wrap;
-    flex-basis: calc(100% / 3 );
-    margin-left: -24px;
-    margin-top: -48px;
-    outline: 1px solid teal;
+    flex-basis: calc((100% - 48px) / 3 );
 }
 
-.list-card > li {
-    margin-left: 24px;
+.list-card .card {
+    margin-right: 24px;
     margin-top: 48px;
 }
+
+.list-card > .card:nth-child(3n) {
+    margin-right: 0;
+}
+
+.list-card > .card:nth-child(-n + 3) {
+    margin-top: 0;
+} 
 
 /*! cтили footer */
 .footer {
     background-color: var(--second-background-title);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.footer-content {
+    width: 264px;
 }
 
 .logo .footer-span {
@@ -390,18 +353,6 @@ header {
 }
 
 .footer p {
+    margin-top: 16px;
     color: var(--border-color-header);
-}
-
-.footer-container {
-    width: 264px;
-    margin-left: 156px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    outline: 1px solid teal;
-}
-
-.footer-container a {
-    display: inline-block;
-    margin-bottom: 16px;
 }
