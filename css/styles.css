@@ -171,6 +171,7 @@ header {
     padding: 16px 32px;
     /* почему высота кнопки 52.48, а в макете 56? */
 }
+
 .hero-button:hover,
 .hero-button:focus {
     background-color:var(--active-color);
@@ -197,15 +198,30 @@ header {
     letter-spacing: 0.02em; 
 }
 
-.list-solutions {
+.sectionOne-title {
+    margin-top: 8px;
+}
+
+.list-solutions,
+.list-img,
+.list-customers,
+.list-team,
+.list-social {
     display: flex;
 }
 
-.list-solutions > li:not(:first-child) {
+.list-solutions > li:not(:first-child),
+.list-img > li:not(:first-child),
+.list-customers > li:not(:first-child),
+.list-team > li:not(:first-child),
+.list-social > li:not(:first-child),
+.list-button > li:not(:first-child) {
     margin-left: 24px;
 }
 
-.list-item.icone_1::before {
+
+/* svg за допомогою псевдоелементів */
+/* .list-item.icone_1::before {
     background-image: url("../img/sectionOne_1.svg");
 }
 .list-item.icone_2::before {
@@ -222,10 +238,16 @@ header {
     content: "";
     display: block;
     height: 112px;
+    border-radius: 4px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: var(--primary-color-text);
+} */
+
+.icon-solutions {
+    width: 264px;
+    height: 112px;
 }
 
 .sectionTwo {
@@ -242,25 +264,18 @@ header {
     text-transform: capitalize; 
 }
 
-.list-img {
-    display: flex;
-}
-
-.list-img > li:not(:first-child) {
-    margin-left: 24px;
-}
-
 .sectionTeam {
     text-align: center;
     background-color: var(--additional-color);
 }
 
 .card-content {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding: 16px 16px 32px 16px;
     background-color: var(--primary-color);
 }
-.sectionTeam-title {
+
+.sectionTeam-title,
+.sectionCustomers-title {
     margin-bottom: 72px;
     font-size: 36px;
     font-weight: 700;
@@ -269,12 +284,32 @@ header {
     text-transform: capitalize; 
 }
 
-.list-team {
-    display: flex;
+.list-social {
+    margin-top: 8px;
 }
 
-.list-team > li:not(:first-child) {
-    margin-left: 24px;
+.icon-social {
+    width: 40px;
+    height: 40px;
+}
+
+.sectionCustomers {
+    text-align: center;
+    padding-top: 130px;
+    padding-bottom: 120px;
+}
+
+.icon-customers {
+    width: 104px;
+    height: 56px;
+}
+
+.icon-border {
+    width: 168px;
+    height: 88px;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    padding: 16px 32px;
 }
 
 /*! Portfolio */
@@ -290,9 +325,7 @@ header {
     margin-bottom: 72px;
 }
 
-.list-button > li:not(:first-child) {
-    margin-left: 24px;
-}
+
 
 .btn-filters {
     padding: 12px 24px;
@@ -342,11 +375,6 @@ header {
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em; 
-}
-
-.card:hover,
-.card:focus {
-    /* outline: 1px solid var(--accent-text-color); */
 }
 
 .list-card {
