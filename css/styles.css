@@ -57,9 +57,9 @@ img {
 
 /* размеры контейнеров */
 .container {
-    width: 1160px;
-    padding-left: 16px;
-    padding-right: 16px;
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -131,10 +131,18 @@ header {
 /*! Studio */
 /* стили hero */
 .hero {
-    background-color: var(--second-background-title);
     padding-top: 188px;
     padding-bottom: 188px; 
+    background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../img/people-office.jpg");
+    height: 600px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     text-align: center;
+    background-color: var(--second-background-title);
 }
 
 .hero-title {
@@ -195,6 +203,29 @@ header {
 
 .list-solutions > li:not(:first-child) {
     margin-left: 24px;
+}
+
+.list-item.icone_1::before {
+    background-image: url("../img/sectionOne_1.svg");
+}
+.list-item.icone_2::before {
+    background-image: url("../img/sectionOne_2.svg");
+}
+.list-item.icone_3::before {
+    background-image: url("../img/sectionOne_3.svg");
+}
+.list-item.icone_4::before {
+    background-image: url("../img/sectionOne_4.svg");
+}
+
+.list-item::before {
+    content: "";
+    display: block;
+    height: 112px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--primary-color-text);
 }
 
 .sectionTwo {
