@@ -206,7 +206,8 @@ header {
 .list-img,
 .list-customers,
 .list-team,
-.list-social {
+.list-social,
+.icon-footer {
     display: flex;
 }
 
@@ -269,6 +270,14 @@ header {
     background-color: var(--additional-color);
 }
 
+.tumba-person {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    overflow: hidden;
+}
+
 .card-content {
     padding: 16px 16px 32px 16px;
     background-color: var(--primary-color);
@@ -283,14 +292,28 @@ header {
     letter-spacing: 0.02em;
     text-transform: capitalize; 
 }
-
 .list-social {
     margin-top: 8px;
 }
 
-.icon-social {
+.link-icon-team {
+    display: inline-block;
     width: 40px;
     height: 40px;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: var(--accent-text-color);
+}
+
+.icon-social-team {
+    width: 16px;
+    height: 16px;
+    fill: var(--primary-color);
+}
+
+.link-icon-team:hover,
+.link-icon-team:focus {
+    background-color: #31D0AA;
 }
 
 .sectionCustomers {
@@ -302,6 +325,7 @@ header {
 .icon-customers {
     width: 104px;
     height: 56px;
+    fill: #8e8f99;
 }
 
 .icon-border {
@@ -310,6 +334,16 @@ header {
     border: 1px solid #8E8F99;
     border-radius: 4px;
     padding: 16px 32px;
+}
+
+.icon-border:hover,
+.icon-border:focus {
+    border: 1px solid #404BBF;
+}
+
+.icon-customers:hover,
+.icon-customers:focus {
+    fill: #404BBF;
 }
 
 /*! Portfolio */
@@ -324,8 +358,6 @@ header {
     justify-content: center;
     margin-bottom: 72px;
 }
-
-
 
 .btn-filters {
     padding: 12px 24px;
@@ -346,6 +378,7 @@ header {
     background-color: var(--active-color);
     color: var(--primary-color);
     border: 1px solid var(--active-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* стили списка картинок */
@@ -396,11 +429,25 @@ header {
     margin-top: 0;
 } 
 
+.tumba-portfolio {
+    display: inline-block;
+}
+
+.tumba-portfolio:hover,
+.tumba-portfolio:focus {
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
 /*! cтили footer */
 .footer {
     background-color: var(--second-background-title);
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+.footer-flex {
+    display: flex;
 }
 
 .footer-content {
@@ -414,4 +461,39 @@ header {
 .footer p {
     margin-top: 16px;
     color: var(--border-color-header);
+}
+
+.footer-icon {
+    width: 208px;
+    margin-left: 120px;
+}
+
+.footer-icon > h4 {
+    margin-bottom: 16px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.icon-social {
+    width: 24px;
+    height: 24px;
+    fill: var(--primary-color);
+}
+
+.icon-footer > li:not(:first-child) {
+    margin-left: 16px;
+}
+
+.link-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1)
+}
+
+.link-icon:hover,
+.link-icon:focus {
+    background-color: #31D0AA;
 }
