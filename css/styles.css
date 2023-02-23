@@ -246,9 +246,18 @@ header {
     background-color: var(--primary-color-text);
 } */
 
+.tumba-icon-solutions {
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-radius: 4px;
+    background-color: var(--additional-color);
+}
+
 .icon-solutions {
-    width: 264px;
-    height: 112px;
+    width: 64px;
+    height: 64px;
 }
 
 .sectionTwo {
@@ -279,7 +288,8 @@ header {
 }
 
 .card-content {
-    padding: 16px 16px 32px 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     background-color: var(--primary-color);
 }
 
@@ -293,7 +303,8 @@ header {
     text-transform: capitalize; 
 }
 .list-social {
-    margin-top: 8px;
+    margin: 8px 16px 0;
+    justify-content: center;
 }
 
 .link-icon-team {
@@ -313,7 +324,7 @@ header {
 
 .link-icon-team:hover,
 .link-icon-team:focus {
-    background-color: #31D0AA;
+    background-color: var(--active-color);
 }
 
 .sectionCustomers {
@@ -322,28 +333,30 @@ header {
     padding-bottom: 120px;
 }
 
+.tumba-icon-customer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 88px;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+}
+
 .icon-customers {
     width: 104px;
     height: 56px;
     fill: #8e8f99;
 }
 
-.icon-border {
-    width: 168px;
-    height: 88px;
-    border: 1px solid #8E8F99;
-    border-radius: 4px;
-    padding: 16px 32px;
-}
+.tumba-icon-customer:hover,
+.tumba-icon-customer:focus {
+    border: 1px solid var(--active-color);
+} 
 
-.icon-border:hover,
-.icon-border:focus {
-    border: 1px solid #404BBF;
-}
-
-.icon-customers:hover,
-.icon-customers:focus {
-    fill: #404BBF;
+.tumba-icon-customer:hover .icon-customers,
+.tumba-icon-customer:focus .icon-customers {
+    fill: var(--active-color);
 }
 
 /*! Portfolio */
@@ -464,11 +477,11 @@ header {
 }
 
 .footer-icon {
-    width: 208px;
     margin-left: 120px;
 }
 
-.footer-icon > h4 {
+.footer-icon > p {
+    margin-top: 0;
     margin-bottom: 16px;
     color: var(--primary-color);
     font-weight: 500;
@@ -497,3 +510,4 @@ header {
 .link-icon:focus {
     background-color: #31D0AA;
 }
+
