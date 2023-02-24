@@ -248,9 +248,9 @@ header {
 
 .tumba-icon-solutions {
     display: flex;
+    height: 112px;
     justify-content: center;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    align-items: center;
     border-radius: 4px;
     background-color: var(--additional-color);
 }
@@ -308,10 +308,11 @@ header {
 }
 
 .link-icon-team {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40px;
     height: 40px;
-    padding: 12px;
     border-radius: 50%;
     background-color: var(--accent-text-color);
 }
@@ -498,10 +499,11 @@ header {
 }
 
 .link-icon {
-    display: inline-block;
+    display: flex;
     width: 40px;
     height: 40px;
-    padding: 8px;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1)
 }
